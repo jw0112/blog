@@ -1,0 +1,30 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Jinwon Lee"
+  navbar:
+    left:
+      - index.qmd
+      - Data_Mining.qmd
+      - Data_Visualization.qmd
+      - Project.qmd
+      - Certification.qmd
+
+    right:
+      - icon: github
+        href: https://github.com/jw0112
+    page-footer: 
+      left: "Made by Quarto"
+format:
+  html:
+    theme: minty
+    toc: true
+    self-contained: true
+    smooth-scroll: true
+    code-fold: true
+    code-tools: true
+    # toc-depth : 5
+    # number-sections: true
+    css: styles.css
