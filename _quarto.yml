@@ -7,9 +7,9 @@ website:
   navbar:
     left:
       - index.qmd
+      - Project.qmd
       - Data_Mining.qmd
       - Data_Visualization.qmd
-      - Project.qmd
       - Certification.qmd
 
     right:
