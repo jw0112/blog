@@ -4012,16 +4012,16 @@ vertical-align: -.125em;
  <span class="menu-text">Profile</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../../Project.html">
+ <span class="menu-text">Project</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../../Data_Mining.html">
  <span class="menu-text">Data Mining</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../Data_Visualization.html">
  <span class="menu-text">Data Visualization</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../Project.html">
- <span class="menu-text">Project</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../Certification.html">
@@ -4044,7 +4044,7 @@ vertical-align: -.125em;
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-page-left">
-      <div class="quarto-title-block"><div><h1 class="title">Coordinate systems and axes</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+      <h1 class="title">Coordinate systems and axes</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">Visualization</div>
                 <div class="quarto-category">Code</div>
@@ -4446,8 +4446,6 @@ vertical-align: -.125em;
 </div>
 
 
-<!-- -->
-
 </section>
 </section>
 
@@ -4517,57 +4515,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  const viewSource = window.document.getElementById('quarto-view-source') ||
-                     window.document.getElementById('quarto-code-tools-source');
-  if (viewSource) {
-    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
-    viewSource.addEventListener("click", function(e) {
-      if (sourceUrl) {
-        // rstudio viewer pane
-        if (/\bcapabilities=\b/.test(window.location)) {
-          window.open(sourceUrl);
-        } else {
-          window.location.href = sourceUrl;
-        }
-      } else {
-        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
-        modal.show();
-      }
-      return false;
-    });
-  }
-  function toggleCodeHandler(show) {
-    return function(e) {
-      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
-      for (let i=0; i<detailsSrc.length; i++) {
-        const details = detailsSrc[i].parentElement;
-        if (show) {
-          details.open = true;
-        } else {
-          details.removeAttribute("open");
-        }
-      }
-      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
-      const fromCls = show ? "hidden" : "unhidden";
-      const toCls = show ? "unhidden" : "hidden";
-      for (let i=0; i<cellCodeDivs.length; i++) {
-        const codeDiv = cellCodeDivs[i];
-        if (codeDiv.classList.contains(fromCls)) {
-          codeDiv.classList.remove(fromCls);
-          codeDiv.classList.add(toCls);
-        } 
-      }
-      return false;
-    }
-  }
-  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
-  if (hideAllCode) {
-    hideAllCode.addEventListener("click", toggleCodeHandler(false));
-  }
-  const showAllCode = window.document.getElementById("quarto-show-all-code");
-  if (showAllCode) {
-    showAllCode.addEventListener("click", toggleCodeHandler(true));
-  }
   function tippyHover(el, contentFn) {
     const config = {
       allowHTML: true,
@@ -4635,248 +4582,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class>
-<div class="sourceCode" id="cb12" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> &quot;Coordinate systems and axes&quot;</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> &quot;Jinwon Lee&quot;</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> &quot;2023-03-29&quot;</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [Visualization, Code, R]</span></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="an">page-layout:</span><span class="co"> full</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="an">image:</span><span class="co"> &quot;coord_polar.png&quot;</span></span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="an">output:</span></span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="co">  prettydoc::html_pretty:</span></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="co">    theme: architect</span></span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="co">    highlight: github</span></span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="an">editor_options:</span><span class="co"> </span></span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="co">  chunk_output_type: console</span></span>
-<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="an">mainfont:</span><span class="co"> NanumGothic</span></span>
-<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="in">```{r setup, include = FALSE}</span></span>
-<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(</span>
-<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">echo =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">collapse =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">comment =</span> <span class="st">&quot;#&gt;&quot;</span></span>
-<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a><span class="co"># setwd(&#39;./Data_Visualization/Coordinate_systems_and_axes&#39;)</span></span>
-<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span>
-<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a><span class="fu"># 3. Coordinate systems and axes</span></span>
-<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Read csv File</span></span>
-<span id="cb12-34"><a href="#cb12-34" aria-hidden="true" tabindex="-1"></a>ncdc_normals <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;../data/ncdc_normals.csv&quot;</span>)</span>
-<span id="cb12-35"><a href="#cb12-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-36"><a href="#cb12-36" aria-hidden="true" tabindex="-1"></a><span class="co"># station_loc Dataframe 생성</span></span>
-<span id="cb12-37"><a href="#cb12-37" aria-hidden="true" tabindex="-1"></a>station_loc <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb12-38"><a href="#cb12-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">station_id =</span> <span class="fu">c</span>(<span class="st">&quot;USW00014819&quot;</span>, <span class="st">&quot;USC00042319&quot;</span>, <span class="st">&quot;USW00093107&quot;</span>, <span class="st">&quot;USW00012918&quot;</span>),</span>
-<span id="cb12-39"><a href="#cb12-39" aria-hidden="true" tabindex="-1"></a>    <span class="at">location =</span> <span class="fu">c</span>(<span class="st">&quot;Chicago&quot;</span>, <span class="st">&quot;Death Valley&quot;</span>, <span class="st">&quot;San Diego&quot;</span>, <span class="st">&quot;Houston&quot;</span>)</span>
-<span id="cb12-40"><a href="#cb12-40" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb12-41"><a href="#cb12-41" aria-hidden="true" tabindex="-1"></a>station_loc</span>
-<span id="cb12-42"><a href="#cb12-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-43"><a href="#cb12-43" aria-hidden="true" tabindex="-1"></a><span class="co"># Raw Data와 Inner Join</span></span>
-<span id="cb12-44"><a href="#cb12-44" aria-hidden="true" tabindex="-1"></a>temps_long <span class="ot">&lt;-</span> ncdc_normals <span class="sc">%&gt;%</span> <span class="fu">inner_join</span>(station_loc, <span class="at">by =</span> <span class="st">&quot;station_id&quot;</span>)</span>
-<span id="cb12-45"><a href="#cb12-45" aria-hidden="true" tabindex="-1"></a>temps_long <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span>
-<span id="cb12-46"><a href="#cb12-46" aria-hidden="true" tabindex="-1"></a>temps_long <span class="sc">%&gt;%</span> <span class="fu">sapply</span>(class)</span>
-<span id="cb12-47"><a href="#cb12-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-48"><a href="#cb12-48" aria-hidden="true" tabindex="-1"></a><span class="co"># Date Type Convert : Character -&gt; Date</span></span>
-<span id="cb12-49"><a href="#cb12-49" aria-hidden="true" tabindex="-1"></a>temps_long<span class="sc">$</span>date <span class="ot">&lt;-</span> temps_long<span class="sc">$</span>date <span class="sc">%&gt;%</span> <span class="fu">as.Date</span>(<span class="st">&quot;%Y-%m-%d&quot;</span>)</span>
-<span id="cb12-50"><a href="#cb12-50" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-51"><a href="#cb12-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-52"><a href="#cb12-52" aria-hidden="true" tabindex="-1"></a><span class="fu">## Figure 3.2</span></span>
-<span id="cb12-53"><a href="#cb12-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-56"><a href="#cb12-56" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb12-57"><a href="#cb12-57" aria-hidden="true" tabindex="-1"></a><span class="co"># Arrange multiple plots into a grid</span></span>
-<span id="cb12-58"><a href="#cb12-58" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cowplot) <span class="co"># plot_grid()</span></span>
-<span id="cb12-59"><a href="#cb12-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-60"><a href="#cb12-60" aria-hidden="true" tabindex="-1"></a><span class="co"># data_Houston 데이터프레임 생성</span></span>
-<span id="cb12-61"><a href="#cb12-61" aria-hidden="true" tabindex="-1"></a>data_Houston <span class="ot">&lt;-</span> temps_long <span class="sc">%&gt;%</span> <span class="fu">filter</span>(location <span class="sc">==</span> <span class="st">&quot;Houston&quot;</span>)</span>
-<span id="cb12-62"><a href="#cb12-62" aria-hidden="true" tabindex="-1"></a>data_Houston <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span>
-<span id="cb12-63"><a href="#cb12-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-64"><a href="#cb12-64" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data_Houston, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temperature)) <span class="sc">+</span></span>
-<span id="cb12-65"><a href="#cb12-65" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">&quot;royalblue&quot;</span>)</span>
-<span id="cb12-66"><a href="#cb12-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-67"><a href="#cb12-67" aria-hidden="true" tabindex="-1"></a><span class="co"># X축에 표시할 눈금</span></span>
-<span id="cb12-68"><a href="#cb12-68" aria-hidden="true" tabindex="-1"></a>date_s <span class="ot">&lt;-</span> <span class="st">&quot;0000-01-01&quot;</span> <span class="sc">%&gt;%</span> <span class="fu">as.Date</span>(<span class="st">&quot;%Y-%m-%d&quot;</span>)</span>
-<span id="cb12-69"><a href="#cb12-69" aria-hidden="true" tabindex="-1"></a>date_e <span class="ot">&lt;-</span> <span class="st">&quot;0001-01-01&quot;</span> <span class="sc">%&gt;%</span> <span class="fu">as.Date</span>(<span class="st">&quot;%Y-%m-%d&quot;</span>)</span>
-<span id="cb12-70"><a href="#cb12-70" aria-hidden="true" tabindex="-1"></a>break_date <span class="ot">&lt;-</span> <span class="fu">seq.Date</span>(date_s, date_e, <span class="at">by =</span> <span class="st">&quot;3 month&quot;</span>) <span class="co"># 3달 간격 Date 생성</span></span>
-<span id="cb12-71"><a href="#cb12-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-72"><a href="#cb12-72" aria-hidden="true" tabindex="-1"></a><span class="co"># ggplot + 축 생성</span></span>
-<span id="cb12-73"><a href="#cb12-73" aria-hidden="true" tabindex="-1"></a>temp_plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(data_Houston, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temperature)) <span class="sc">+</span></span>
-<span id="cb12-74"><a href="#cb12-74" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">&quot;royalblue&quot;</span>) <span class="sc">+</span></span>
-<span id="cb12-75"><a href="#cb12-75" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_date</span>(</span>
-<span id="cb12-76"><a href="#cb12-76" aria-hidden="true" tabindex="-1"></a>        <span class="at">name =</span> <span class="st">&quot;month&quot;</span>, <span class="at">breaks =</span> break_date,</span>
-<span id="cb12-77"><a href="#cb12-77" aria-hidden="true" tabindex="-1"></a>        <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;Jan&quot;</span>, <span class="st">&quot;Apr&quot;</span>, <span class="st">&quot;Jul&quot;</span>, <span class="st">&quot;Oct&quot;</span>, <span class="st">&quot;Jan&quot;</span>)</span>
-<span id="cb12-78"><a href="#cb12-78" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
-<span id="cb12-79"><a href="#cb12-79" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continuous</span>(<span class="at">name =</span> <span class="st">&quot;temp&quot;</span>) <span class="sc">+</span> <span class="co"># limits = c(0, 100) -&gt; y 범위 지정</span></span>
-<span id="cb12-80"><a href="#cb12-80" aria-hidden="true" tabindex="-1"></a>    <span class="co"># labs(title = &#39;Fig. 2.3&#39;, subtitle = &#39;Daily temperature normals&#39;) +</span></span>
-<span id="cb12-81"><a href="#cb12-81" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_light</span>()</span>
-<span id="cb12-82"><a href="#cb12-82" aria-hidden="true" tabindex="-1"></a>temp_plot</span>
-<span id="cb12-83"><a href="#cb12-83" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-84"><a href="#cb12-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-87"><a href="#cb12-87" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb12-88"><a href="#cb12-88" aria-hidden="true" tabindex="-1"></a><span class="co"># 2 subplots</span></span>
-<span id="cb12-89"><a href="#cb12-89" aria-hidden="true" tabindex="-1"></a>plot_ab <span class="ot">&lt;-</span> <span class="fu">plot_grid</span>(temp_plot, temp_plot,</span>
-<span id="cb12-90"><a href="#cb12-90" aria-hidden="true" tabindex="-1"></a>    <span class="at">nrow =</span> <span class="dv">1</span>, <span class="at">rel_widths =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>), <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>)</span>
-<span id="cb12-91"><a href="#cb12-91" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb12-92"><a href="#cb12-92" aria-hidden="true" tabindex="-1"></a>plot_ab</span>
-<span id="cb12-93"><a href="#cb12-93" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-94"><a href="#cb12-94" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-97"><a href="#cb12-97" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb12-98"><a href="#cb12-98" aria-hidden="true" tabindex="-1"></a><span class="co"># 3 subplots</span></span>
-<span id="cb12-99"><a href="#cb12-99" aria-hidden="true" tabindex="-1"></a>plot_abc <span class="ot">&lt;-</span> <span class="fu">plot_grid</span>(plot_ab, temp_plot,</span>
-<span id="cb12-100"><a href="#cb12-100" aria-hidden="true" tabindex="-1"></a>    <span class="at">ncol =</span> <span class="dv">1</span>, <span class="at">rel_widths =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">1</span>), <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;&quot;</span>, <span class="st">&quot;c&quot;</span>)</span>
-<span id="cb12-101"><a href="#cb12-101" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb12-102"><a href="#cb12-102" aria-hidden="true" tabindex="-1"></a>plot_abc</span>
-<span id="cb12-103"><a href="#cb12-103" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-104"><a href="#cb12-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-105"><a href="#cb12-105" aria-hidden="true" tabindex="-1"></a><span class="fu">## Figure 3.5 ~ 3.6</span></span>
-<span id="cb12-106"><a href="#cb12-106" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-109"><a href="#cb12-109" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb12-110"><a href="#cb12-110" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggrepel) <span class="co"># geom_text_repel()</span></span>
-<span id="cb12-111"><a href="#cb12-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-112"><a href="#cb12-112" aria-hidden="true" tabindex="-1"></a><span class="co"># Read csv File</span></span>
-<span id="cb12-113"><a href="#cb12-113" aria-hidden="true" tabindex="-1"></a>Us_census <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;../data/US_census.csv&quot;</span>)</span>
-<span id="cb12-114"><a href="#cb12-114" aria-hidden="true" tabindex="-1"></a>Us_census <span class="sc">%&gt;%</span> <span class="fu">head</span>(<span class="dv">2</span>)</span>
-<span id="cb12-115"><a href="#cb12-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-116"><a href="#cb12-116" aria-hidden="true" tabindex="-1"></a>tx_counties <span class="ot">&lt;-</span> Us_census <span class="sc">%&gt;%</span></span>
-<span id="cb12-117"><a href="#cb12-117" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(state <span class="sc">==</span> <span class="st">&quot;Texas&quot;</span>) <span class="sc">%&gt;%</span> <span class="co"># Texas 주만 추출</span></span>
-<span id="cb12-118"><a href="#cb12-118" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(name, pop2010) <span class="sc">%&gt;%</span> <span class="co"># name과 pop2010 열만 추출</span></span>
-<span id="cb12-119"><a href="#cb12-119" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
-<span id="cb12-120"><a href="#cb12-120" aria-hidden="true" tabindex="-1"></a>        <span class="at">county =</span> <span class="fu">gsub</span>(<span class="st">&quot; County&quot;</span>, <span class="st">&quot;&quot;</span>, name), <span class="co"># &quot; County&quot; 제거하여 county 열 생성</span></span>
-<span id="cb12-121"><a href="#cb12-121" aria-hidden="true" tabindex="-1"></a>        <span class="at">popratio =</span> pop2010 <span class="sc">/</span> <span class="fu">median</span>(pop2010)</span>
-<span id="cb12-122"><a href="#cb12-122" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">%&gt;%</span> <span class="co"># pop2010을 중앙값으로 나누어 비율 생성</span></span>
-<span id="cb12-123"><a href="#cb12-123" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>(<span class="fu">desc</span>(popratio)) <span class="sc">%&gt;%</span> <span class="co"># 내림차순으로 정렬</span></span>
-<span id="cb12-124"><a href="#cb12-124" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
-<span id="cb12-125"><a href="#cb12-125" aria-hidden="true" tabindex="-1"></a>        <span class="at">index =</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">n</span>(), <span class="co"># index 열 생성</span></span>
-<span id="cb12-126"><a href="#cb12-126" aria-hidden="true" tabindex="-1"></a>        <span class="at">label =</span> <span class="fu">ifelse</span>(index <span class="sc">&lt;=</span> <span class="dv">3</span> <span class="sc">|</span> index <span class="sc">&gt;</span> <span class="fu">n</span>() <span class="sc">-</span> <span class="dv">3</span> <span class="sc">|</span> <span class="fu">runif</span>(<span class="fu">n</span>()) <span class="sc">&lt;</span> .<span class="dv">04</span>, county, <span class="st">&quot;&quot;</span>)</span>
-<span id="cb12-127"><a href="#cb12-127" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb12-128"><a href="#cb12-128" aria-hidden="true" tabindex="-1"></a><span class="co"># index 기준으로 상위 3위와 하위 3위인 열만 label을 지정</span></span>
-<span id="cb12-129"><a href="#cb12-129" aria-hidden="true" tabindex="-1"></a>tx_counties <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span>
-<span id="cb12-130"><a href="#cb12-130" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-131"><a href="#cb12-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-134"><a href="#cb12-134" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb12-135"><a href="#cb12-135" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure 3.6</span></span>
-<span id="cb12-136"><a href="#cb12-136" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(tx_counties, <span class="fu">aes</span>(<span class="at">x =</span> index, <span class="at">y =</span> popratio)) <span class="sc">+</span></span>
-<span id="cb12-137"><a href="#cb12-137" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">linetype =</span> <span class="dv">2</span>, <span class="at">color =</span> <span class="st">&quot;grey40&quot;</span>) <span class="sc">+</span></span>
-<span id="cb12-138"><a href="#cb12-138" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">&quot;royalblue&quot;</span>) <span class="sc">+</span></span>
-<span id="cb12-139"><a href="#cb12-139" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text_repel</span>(<span class="fu">aes</span>(<span class="at">label =</span> label),</span>
-<span id="cb12-140"><a href="#cb12-140" aria-hidden="true" tabindex="-1"></a>        <span class="at">min.segment.length =</span> <span class="dv">0</span>,</span>
-<span id="cb12-141"><a href="#cb12-141" aria-hidden="true" tabindex="-1"></a>        <span class="at">max.overlaps =</span> <span class="dv">100</span></span>
-<span id="cb12-142"><a href="#cb12-142" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
-<span id="cb12-143"><a href="#cb12-143" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_light</span>() <span class="sc">+</span></span>
-<span id="cb12-144"><a href="#cb12-144" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">panel.border =</span> <span class="fu">element_blank</span>())</span>
-<span id="cb12-145"><a href="#cb12-145" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-146"><a href="#cb12-146" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-149"><a href="#cb12-149" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb12-150"><a href="#cb12-150" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure 3.5</span></span>
-<span id="cb12-151"><a href="#cb12-151" aria-hidden="true" tabindex="-1"></a>label_log10 <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="sc">-</span><span class="dv">2</span><span class="sc">:</span><span class="dv">2</span>, <span class="cf">function</span>(i) <span class="fu">as.expression</span>(<span class="fu">bquote</span>(<span class="dv">10</span><span class="sc">^</span>.(i))))</span>
-<span id="cb12-152"><a href="#cb12-152" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-153"><a href="#cb12-153" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(tx_counties, <span class="fu">aes</span>(<span class="at">x =</span> index, <span class="at">y =</span> popratio)) <span class="sc">+</span></span>
-<span id="cb12-154"><a href="#cb12-154" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">linetype =</span> <span class="dv">2</span>, <span class="at">color =</span> <span class="st">&quot;grey40&quot;</span>) <span class="sc">+</span> <span class="co"># 수평선 생성 (yintercept : y절편)</span></span>
-<span id="cb12-155"><a href="#cb12-155" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">&quot;royalblue&quot;</span>) <span class="sc">+</span></span>
-<span id="cb12-156"><a href="#cb12-156" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text_repel</span>(<span class="fu">aes</span>(<span class="at">label =</span> label),</span>
-<span id="cb12-157"><a href="#cb12-157" aria-hidden="true" tabindex="-1"></a>        <span class="at">min.segment.length =</span> <span class="dv">0</span>, <span class="co"># label을 표시하기 위해 연결해야하는 최소한의 선분 길이</span></span>
-<span id="cb12-158"><a href="#cb12-158" aria-hidden="true" tabindex="-1"></a>        <span class="at">max.overlaps =</span> <span class="dv">100</span></span>
-<span id="cb12-159"><a href="#cb12-159" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span> <span class="co"># label 간의 최대 겹침 횟수</span></span>
-<span id="cb12-160"><a href="#cb12-160" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_log10</span>(</span>
-<span id="cb12-161"><a href="#cb12-161" aria-hidden="true" tabindex="-1"></a>        <span class="at">name =</span> <span class="st">&quot;population number / median&quot;</span>,</span>
-<span id="cb12-162"><a href="#cb12-162" aria-hidden="true" tabindex="-1"></a>        <span class="at">breaks =</span> <span class="dv">10</span><span class="sc">^</span>(<span class="sc">-</span><span class="dv">2</span><span class="sc">:</span><span class="dv">2</span>),</span>
-<span id="cb12-163"><a href="#cb12-163" aria-hidden="true" tabindex="-1"></a>        <span class="at">labels =</span> label_log10</span>
-<span id="cb12-164"><a href="#cb12-164" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
-<span id="cb12-165"><a href="#cb12-165" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_continuous</span>(</span>
-<span id="cb12-166"><a href="#cb12-166" aria-hidden="true" tabindex="-1"></a>        <span class="at">name =</span> <span class="st">&quot;Texas counties, from most to leas populous&quot;</span>,</span>
-<span id="cb12-167"><a href="#cb12-167" aria-hidden="true" tabindex="-1"></a>        <span class="at">breaks =</span> <span class="cn">NULL</span></span>
-<span id="cb12-168"><a href="#cb12-168" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
-<span id="cb12-169"><a href="#cb12-169" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_light</span>() <span class="sc">+</span></span>
-<span id="cb12-170"><a href="#cb12-170" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">panel.border =</span> <span class="fu">element_blank</span>())</span>
-<span id="cb12-171"><a href="#cb12-171" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-172"><a href="#cb12-172" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-173"><a href="#cb12-173" aria-hidden="true" tabindex="-1"></a><span class="fu">## 예제 - 시군구 인구수 2023년</span></span>
-<span id="cb12-174"><a href="#cb12-174" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-177"><a href="#cb12-177" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb12-178"><a href="#cb12-178" aria-hidden="true" tabindex="-1"></a>data_202202 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;../data/행정구역_시군구_별_주민등록세대수_202302.csv&quot;</span>, <span class="at">encoding =</span> <span class="st">&quot;UTF-8&quot;</span>)</span>
-<span id="cb12-179"><a href="#cb12-179" aria-hidden="true" tabindex="-1"></a>data_202202 <span class="sc">%&gt;%</span> <span class="fu">head</span>()</span>
-<span id="cb12-180"><a href="#cb12-180" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-181"><a href="#cb12-181" aria-hidden="true" tabindex="-1"></a>kor_census <span class="ot">&lt;-</span> data_202202 <span class="sc">%&gt;%</span></span>
-<span id="cb12-182"><a href="#cb12-182" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(X2023<span class="fl">.02</span> <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb12-183"><a href="#cb12-183" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">popratio =</span> X2023<span class="fl">.02</span> <span class="sc">/</span> <span class="fu">median</span>(X2023<span class="fl">.02</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb12-184"><a href="#cb12-184" aria-hidden="true" tabindex="-1"></a>    <span class="fu">arrange</span>(popratio <span class="sc">%&gt;%</span> <span class="fu">desc</span>()) <span class="sc">%&gt;%</span></span>
-<span id="cb12-185"><a href="#cb12-185" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">index =</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">n</span>(), <span class="at">label =</span> <span class="fu">ifelse</span>(index <span class="sc">&lt;=</span> <span class="dv">5</span> <span class="sc">|</span> index <span class="sc">&gt;</span> <span class="fu">n</span>() <span class="sc">-</span> <span class="dv">5</span> <span class="sc">|</span> index <span class="sc">==</span> <span class="fu">median</span>(index), 행정구역.시군구.별, <span class="st">&quot;&quot;</span>))</span>
-<span id="cb12-186"><a href="#cb12-186" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-187"><a href="#cb12-187" aria-hidden="true" tabindex="-1"></a>label_log10 <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="sc">-</span><span class="dv">2</span><span class="sc">:</span><span class="dv">2</span>, <span class="cf">function</span>(i) <span class="fu">as.expression</span>(<span class="fu">bquote</span>(<span class="dv">10</span><span class="sc">^</span>.(i))))</span>
-<span id="cb12-188"><a href="#cb12-188" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-189"><a href="#cb12-189" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(kor_census, <span class="fu">aes</span>(<span class="at">x =</span> index, <span class="at">y =</span> popratio)) <span class="sc">+</span></span>
-<span id="cb12-190"><a href="#cb12-190" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">1</span>, <span class="at">linetype =</span> <span class="dv">2</span>, <span class="at">color =</span> <span class="st">&quot;grey40&quot;</span>) <span class="sc">+</span></span>
-<span id="cb12-191"><a href="#cb12-191" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">&quot;royalblue&quot;</span>) <span class="sc">+</span></span>
-<span id="cb12-192"><a href="#cb12-192" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_text_repel</span>(<span class="fu">aes</span>(<span class="at">label =</span> label),</span>
-<span id="cb12-193"><a href="#cb12-193" aria-hidden="true" tabindex="-1"></a>        <span class="at">min.segment.length =</span> <span class="dv">0</span>,</span>
-<span id="cb12-194"><a href="#cb12-194" aria-hidden="true" tabindex="-1"></a>        <span class="at">max.overlaps =</span> <span class="dv">100</span></span>
-<span id="cb12-195"><a href="#cb12-195" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
-<span id="cb12-196"><a href="#cb12-196" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_log10</span>(</span>
-<span id="cb12-197"><a href="#cb12-197" aria-hidden="true" tabindex="-1"></a>        <span class="at">name =</span> <span class="st">&quot;인구 수 / 중위 수&quot;</span>,</span>
-<span id="cb12-198"><a href="#cb12-198" aria-hidden="true" tabindex="-1"></a>        <span class="at">breaks =</span> <span class="dv">10</span><span class="sc">^</span>(<span class="sc">-</span><span class="dv">2</span><span class="sc">:</span><span class="dv">2</span>),</span>
-<span id="cb12-199"><a href="#cb12-199" aria-hidden="true" tabindex="-1"></a>        <span class="at">labels =</span> label_log10,</span>
-<span id="cb12-200"><a href="#cb12-200" aria-hidden="true" tabindex="-1"></a>        <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">10</span><span class="sc">^-</span><span class="fl">1.3</span>, <span class="dv">10</span><span class="sc">^</span><span class="fl">1.3</span>)</span>
-<span id="cb12-201"><a href="#cb12-201" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
-<span id="cb12-202"><a href="#cb12-202" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_discrete</span>(</span>
-<span id="cb12-203"><a href="#cb12-203" aria-hidden="true" tabindex="-1"></a>        <span class="at">name =</span> <span class="st">&quot;행정구역(시군구)별 주민등록세대수&quot;</span>,</span>
-<span id="cb12-204"><a href="#cb12-204" aria-hidden="true" tabindex="-1"></a>        <span class="at">breaks =</span> <span class="cn">NULL</span></span>
-<span id="cb12-205"><a href="#cb12-205" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
-<span id="cb12-206"><a href="#cb12-206" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_light</span>() <span class="sc">+</span></span>
-<span id="cb12-207"><a href="#cb12-207" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">panel.border =</span> <span class="fu">element_blank</span>())</span>
-<span id="cb12-208"><a href="#cb12-208" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-209"><a href="#cb12-209" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-210"><a href="#cb12-210" aria-hidden="true" tabindex="-1"></a><span class="fu">## Figure 3.10</span></span>
-<span id="cb12-213"><a href="#cb12-213" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb12-214"><a href="#cb12-214" aria-hidden="true" tabindex="-1"></a><span class="co"># X축에 표시할 눈금</span></span>
-<span id="cb12-215"><a href="#cb12-215" aria-hidden="true" tabindex="-1"></a>date_s <span class="ot">&lt;-</span> <span class="st">&quot;0000-01-01&quot;</span> <span class="sc">%&gt;%</span> <span class="fu">as.Date</span>(<span class="st">&quot;%Y-%m-%d&quot;</span>)</span>
-<span id="cb12-216"><a href="#cb12-216" aria-hidden="true" tabindex="-1"></a>date_e <span class="ot">&lt;-</span> <span class="st">&quot;0001-01-01&quot;</span> <span class="sc">%&gt;%</span> <span class="fu">as.Date</span>(<span class="st">&quot;%Y-%m-%d&quot;</span>)</span>
-<span id="cb12-217"><a href="#cb12-217" aria-hidden="true" tabindex="-1"></a>break_date <span class="ot">&lt;-</span> <span class="fu">seq.Date</span>(date_s, date_e, <span class="at">by =</span> <span class="st">&quot;3 month&quot;</span>) <span class="co"># 3달 간격 Date 생성</span></span>
-<span id="cb12-218"><a href="#cb12-218" aria-hidden="true" tabindex="-1"></a>data_lab <span class="ot">&lt;-</span> <span class="fu">format</span>(break_date, <span class="st">&quot;%B&quot;</span>)</span>
-<span id="cb12-219"><a href="#cb12-219" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-220"><a href="#cb12-220" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(temps_long, <span class="fu">aes</span>(<span class="at">x =</span> date, <span class="at">y =</span> temperature, <span class="at">color =</span> location)) <span class="sc">+</span></span>
-<span id="cb12-221"><a href="#cb12-221" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="fl">1.2</span>) <span class="sc">+</span></span>
-<span id="cb12-222"><a href="#cb12-222" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_date</span>(<span class="at">name =</span> <span class="st">&quot;month&quot;</span>, <span class="at">breaks =</span> break_date, <span class="at">labels =</span> data_lab) <span class="sc">+</span></span>
-<span id="cb12-223"><a href="#cb12-223" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continuous</span>(<span class="at">name =</span> <span class="st">&quot;temperature&quot;</span>, <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">105</span>)) <span class="sc">+</span></span>
-<span id="cb12-224"><a href="#cb12-224" aria-hidden="true" tabindex="-1"></a>    <span class="fu">coord_polar</span>(<span class="at">theta =</span> <span class="st">&quot;x&quot;</span>, <span class="at">start =</span> pi, <span class="at">direction =</span> <span class="sc">-</span><span class="dv">1</span>) <span class="sc">+</span> <span class="co"># 6시 위치에서 반시계 방향</span></span>
-<span id="cb12-225"><a href="#cb12-225" aria-hidden="true" tabindex="-1"></a>    <span class="co"># coord_polar(theta = &quot;x&quot;, start = 0, direction = 1) +    # 12시 위치에서 반시계 방향</span></span>
-<span id="cb12-226"><a href="#cb12-226" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_light</span>() <span class="sc">+</span></span>
-<span id="cb12-227"><a href="#cb12-227" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">panel.border =</span> <span class="fu">element_blank</span>())</span>
-<span id="cb12-228"><a href="#cb12-228" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb12-229"><a href="#cb12-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-230"><a href="#cb12-230" aria-hidden="true" tabindex="-1"></a><span class="fu">## 예제 - 기상청 자료 2022년</span></span>
-<span id="cb12-231"><a href="#cb12-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-234"><a href="#cb12-234" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb12-235"><a href="#cb12-235" aria-hidden="true" tabindex="-1"></a><span class="co"># Read csv File</span></span>
-<span id="cb12-236"><a href="#cb12-236" aria-hidden="true" tabindex="-1"></a>data_2022 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;../data/OBS_ASOS_DD_20230322080932.csv&quot;</span>, <span class="at">fileEncoding =</span> <span class="st">&quot;CP949&quot;</span>)</span>
-<span id="cb12-237"><a href="#cb12-237" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-238"><a href="#cb12-238" aria-hidden="true" tabindex="-1"></a><span class="co"># &#39;대전&#39;, &#39;서울&#39;, &#39;세종&#39;, &#39;제주&#39;만 추출</span></span>
-<span id="cb12-239"><a href="#cb12-239" aria-hidden="true" tabindex="-1"></a>data_2022 <span class="ot">&lt;-</span> data_2022 <span class="sc">%&gt;%</span> <span class="fu">filter</span>(지점명 <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;대전&quot;</span>, <span class="st">&quot;서울&quot;</span>, <span class="st">&quot;세종&quot;</span>, <span class="st">&quot;제주&quot;</span>))</span>
-<span id="cb12-240"><a href="#cb12-240" aria-hidden="true" tabindex="-1"></a>data_2022<span class="sc">$</span>지점명 <span class="sc">%&gt;%</span> <span class="fu">unique</span>()</span>
-<span id="cb12-241"><a href="#cb12-241" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-242"><a href="#cb12-242" aria-hidden="true" tabindex="-1"></a><span class="co"># Date Type Convert : Character -&gt; Date</span></span>
-<span id="cb12-243"><a href="#cb12-243" aria-hidden="true" tabindex="-1"></a>data_2022<span class="sc">$</span>일시 <span class="ot">&lt;-</span> data_2022<span class="sc">$</span>일시 <span class="sc">%&gt;%</span> <span class="fu">as.Date</span>(<span class="st">&quot;%Y-%m-%d&quot;</span>)</span>
-<span id="cb12-244"><a href="#cb12-244" aria-hidden="true" tabindex="-1"></a>data_2022 <span class="sc">%&gt;%</span> <span class="fu">sapply</span>(class)</span>
-<span id="cb12-245"><a href="#cb12-245" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-246"><a href="#cb12-246" aria-hidden="true" tabindex="-1"></a><span class="co"># X축 눈금 지정</span></span>
-<span id="cb12-247"><a href="#cb12-247" aria-hidden="true" tabindex="-1"></a>date_s <span class="ot">&lt;-</span> <span class="st">&quot;2022-01-01&quot;</span> <span class="sc">%&gt;%</span> <span class="fu">as.Date</span>(<span class="st">&quot;%Y-%m-%d&quot;</span>)</span>
-<span id="cb12-248"><a href="#cb12-248" aria-hidden="true" tabindex="-1"></a>date_e <span class="ot">&lt;-</span> <span class="st">&quot;2023-01-01&quot;</span> <span class="sc">%&gt;%</span> <span class="fu">as.Date</span>(<span class="st">&quot;%Y-%m-%d&quot;</span>)</span>
-<span id="cb12-249"><a href="#cb12-249" aria-hidden="true" tabindex="-1"></a>break_date <span class="ot">&lt;-</span> <span class="fu">seq.Date</span>(date_s, date_e, <span class="at">by =</span> <span class="st">&quot;2 month&quot;</span>) <span class="co"># 2달 간격 Date 생성</span></span>
-<span id="cb12-250"><a href="#cb12-250" aria-hidden="true" tabindex="-1"></a>data_lab <span class="ot">&lt;-</span> <span class="fu">format</span>(break_date, <span class="st">&quot;%B&quot;</span>)</span>
-<span id="cb12-251"><a href="#cb12-251" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-252"><a href="#cb12-252" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data_2022, <span class="fu">aes</span>(<span class="at">x =</span> 일시, <span class="at">y =</span> 평균기온..C., <span class="at">color =</span> 지점명)) <span class="sc">+</span></span>
-<span id="cb12-253"><a href="#cb12-253" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="fl">1.2</span>) <span class="sc">+</span></span>
-<span id="cb12-254"><a href="#cb12-254" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_date</span>(<span class="at">name =</span> <span class="st">&quot;월&quot;</span>, <span class="at">breaks =</span> break_date, <span class="at">labels =</span> data_lab) <span class="sc">+</span></span>
-<span id="cb12-255"><a href="#cb12-255" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continuous</span>(<span class="at">name =</span> <span class="st">&quot;평균기온&quot;</span>, <span class="at">limits =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">20</span>, <span class="dv">30</span>)) <span class="sc">+</span></span>
-<span id="cb12-256"><a href="#cb12-256" aria-hidden="true" tabindex="-1"></a>    <span class="fu">coord_polar</span>(<span class="at">theta =</span> <span class="st">&quot;x&quot;</span>, <span class="at">start =</span> pi, <span class="at">direction =</span> <span class="sc">-</span><span class="dv">1</span>) <span class="sc">+</span> <span class="co"># 6시 위치에서 반시계 방향</span></span>
-<span id="cb12-257"><a href="#cb12-257" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_light</span>() <span class="sc">+</span></span>
-<span id="cb12-258"><a href="#cb12-258" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">panel.border =</span> <span class="fu">element_blank</span>())</span>
-<span id="cb12-259"><a href="#cb12-259" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div></div></div></div></div>
+</script>
 </div> <!-- /content -->
 
 

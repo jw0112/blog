@@ -2,130 +2,130 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jw0112.github.io/Blog/Certification/DataQ_Example/DataQ_Example.html</loc>
-    <lastmod>2023-06-20T06:24:02.258Z</lastmod>
+    <lastmod>2023-06-20T07:29:38.493Z</lastmod>
   </url>
   <url>
     <loc>https://jw0112.github.io/Blog/Certification/Preprocessing.html</loc>
-    <lastmod>2023-06-20T06:24:05.683Z</lastmod>
+    <lastmod>2023-06-20T07:29:41.683Z</lastmod>
   </url>
   <url>
     <loc>https://jw0112.github.io/Blog/Certification/Type1.html</loc>
-    <lastmod>2023-06-20T06:24:08.342Z</lastmod>
+    <lastmod>2023-06-20T07:29:45.597Z</lastmod>
   </url>
   <url>
     <loc>https://jw0112.github.io/Blog/Certification.html</loc>
-    <lastmod>2023-06-20T06:24:10.484Z</lastmod>
+    <lastmod>2023-06-20T07:29:47.741Z</lastmod>
   </url>
   <url>
     <loc>https://jw0112.github.io/Blog/Data_Mining/Geospatial_Analysis/data_analysis_uber.html</loc>
-    <lastmod>2023-06-20T06:24:13.076Z</lastmod>
+    <lastmod>2023-06-20T07:29:50.763Z</lastmod>
   </url>
   <url>
     <loc>https://jw0112.github.io/Blog/Data_Mining/Geospatial_Analysis/Exercise1_Your_First_Map.html</loc>
-    <lastmod>2023-06-20T06:24:17.293Z</lastmod>
+    <lastmod>2023-06-20T07:29:54.955Z</lastmod>
   </url>
   <url>
     <loc>https://jw0112.github.io/Blog/Data_Mining/Geospatial_Analysis/Exercise2_Coordinate_Reference_Systems.html</loc>
-    <lastmod>2023-06-20T06:24:20.501Z</lastmod>
+    <lastmod>2023-06-20T07:29:58.296Z</lastmod>
   </url>
   <url>
     <loc>https://jw0112.github.io/Blog/Data_Mining/Geospatial_Analysis/Exercise3_Interactive_Maps.html</loc>
-    <lastmod>2023-06-20T06:24:55.865Z</lastmod>
+    <lastmod>2023-06-20T07:30:47.341Z</lastmod>
   </url>
   <url>
     <loc>https://jw0112.github.io/Blog/Data_Mining/Geospatial_Analysis/Exercise4_Manipulating_Geospatial_Data.html</loc>
-    <lastmod>2023-06-20T06:25:00.859Z</lastmod>
+    <lastmod>2023-06-20T07:30:53.018Z</lastmod>
   </url>
   <url>
     <loc>https://jw0112.github.io/Blog/Data_Mining/Geospatial_Analysis/Exercise5_Proximity_Analysis.html</loc>
-    <lastmod>2023-06-20T06:25:09.199Z</lastmod>
+    <lastmod>2023-06-20T07:31:03.928Z</lastmod>
   </url>
   <url>
     <loc>https://jw0112.github.io/Blog/Data_Mining/Geospatial_Analysis/Geospatial_Analysis.html</loc>
-    <lastmod>2023-06-20T06:25:17.852Z</lastmod>
+    <lastmod>2023-06-20T07:31:14.854Z</lastmod>
   </url>
   <url>
     <loc>https://jw0112.github.io/Blog/Data_Mining/Geospatial_Analysis/Pydeck.html</loc>
-    <lastmod>2023-06-20T06:25:20.705Z</lastmod>
+    <lastmod>2023-06-20T07:31:18.206Z</lastmod>
   </url>
   <url>
     <loc>https://jw0112.github.io/Blog/Data_Mining/Loop_Speed/Increase_Loop_Speed.html</loc>
-    <lastmod>2023-06-20T06:25:22.966Z</lastmod>
+    <lastmod>2023-06-20T07:31:20.701Z</lastmod>
   </url>
   <url>
     <loc>https://jw0112.github.io/Blog/Data_Mining/matplotlib.html</loc>
-    <lastmod>2023-06-20T06:25:29.493Z</lastmod>
+    <lastmod>2023-06-20T07:31:28.162Z</lastmod>
   </url>
   <url>
     <loc>https://jw0112.github.io/Blog/Data_Mining/numpy/numpy.html</loc>
-    <lastmod>2023-06-20T06:25:34.019Z</lastmod>
+    <lastmod>2023-06-20T07:31:32.057Z</lastmod>
   </url>
   <url>
     <loc>https://jw0112.github.io/Blog/Data_Mining/pandas/pandas.html</loc>
-    <lastmod>2023-06-20T06:25:38.403Z</lastmod>
+    <lastmod>2023-06-20T07:31:36.337Z</lastmod>
   </url>
   <url>
     <loc>https://jw0112.github.io/Blog/Data_Mining/seaborn.html</loc>
-    <lastmod>2023-06-20T06:25:40.690Z</lastmod>
+    <lastmod>2023-06-20T07:31:39.188Z</lastmod>
   </url>
   <url>
     <loc>https://jw0112.github.io/Blog/Data_Mining.html</loc>
-    <lastmod>2023-06-20T06:25:49.132Z</lastmod>
+    <lastmod>2023-06-20T07:31:53.171Z</lastmod>
   </url>
   <url>
     <loc>https://jw0112.github.io/Blog/Data_Visualization/Color_Scale/Color_Scale.html</loc>
-    <lastmod>2023-06-20T06:25:52.086Z</lastmod>
+    <lastmod>2023-06-20T07:31:56.820Z</lastmod>
   </url>
   <url>
     <loc>https://jw0112.github.io/Blog/Data_Visualization/Coordinate_systems_and_axes/Coordinate_systems_and_axes.html</loc>
-    <lastmod>2023-06-20T06:25:54.573Z</lastmod>
+    <lastmod>2023-06-20T07:31:59.555Z</lastmod>
   </url>
   <url>
     <loc>https://jw0112.github.io/Blog/Data_Visualization/ggplot2_tutorial/ggplot2_tutorial.html</loc>
-    <lastmod>2023-06-20T06:25:57.296Z</lastmod>
+    <lastmod>2023-06-20T07:32:02.446Z</lastmod>
   </url>
   <url>
     <loc>https://jw0112.github.io/Blog/Data_Visualization/NCDC_normals/NCDC_normals.html</loc>
-    <lastmod>2023-06-20T06:25:59.528Z</lastmod>
+    <lastmod>2023-06-20T07:32:04.879Z</lastmod>
   </url>
   <url>
     <loc>https://jw0112.github.io/Blog/Data_Visualization/OBS_2021/OBS_2021.html</loc>
-    <lastmod>2023-06-20T06:26:01.666Z</lastmod>
+    <lastmod>2023-06-20T07:32:07.627Z</lastmod>
   </url>
   <url>
     <loc>https://jw0112.github.io/Blog/Data_Visualization.html</loc>
-    <lastmod>2023-06-20T06:26:04.177Z</lastmod>
+    <lastmod>2023-06-20T07:32:10.272Z</lastmod>
   </url>
   <url>
     <loc>https://jw0112.github.io/Blog/index.html</loc>
-    <lastmod>2023-06-20T06:26:06.589Z</lastmod>
+    <lastmod>2023-06-20T07:32:13.642Z</lastmod>
   </url>
   <url>
     <loc>https://jw0112.github.io/Blog/Project/Airplane_Delay_Prediction/Airplane_Delay_Prediction.html</loc>
-    <lastmod>2023-06-20T06:26:09.096Z</lastmod>
+    <lastmod>2023-06-20T07:32:16.282Z</lastmod>
   </url>
   <url>
     <loc>https://jw0112.github.io/Blog/Project/DriveThru/DriveThru.html</loc>
-    <lastmod>2023-06-20T06:26:12.278Z</lastmod>
+    <lastmod>2023-06-20T07:32:19.651Z</lastmod>
   </url>
   <url>
     <loc>https://jw0112.github.io/Blog/Project/Earthquake/Earthquake.html</loc>
-    <lastmod>2023-06-20T06:26:30.466Z</lastmod>
+    <lastmod>2023-06-20T07:32:40.320Z</lastmod>
   </url>
   <url>
     <loc>https://jw0112.github.io/Blog/Project/Emotion_Classification/Emotion_Classification.html</loc>
-    <lastmod>2023-06-20T06:26:33.059Z</lastmod>
+    <lastmod>2023-06-20T07:32:45.196Z</lastmod>
   </url>
   <url>
     <loc>https://jw0112.github.io/Blog/Project/Jeju_Traffic_Prediction/Jeju_Traffic_Prediction.html</loc>
-    <lastmod>2023-06-20T06:26:35.500Z</lastmod>
+    <lastmod>2023-06-20T07:32:50.129Z</lastmod>
   </url>
   <url>
     <loc>https://jw0112.github.io/Blog/Project/K-Breakwater/K-Breakwater.html</loc>
-    <lastmod>2023-06-20T06:26:38.769Z</lastmod>
+    <lastmod>2023-06-20T07:32:57.208Z</lastmod>
   </url>
   <url>
     <loc>https://jw0112.github.io/Blog/Project.html</loc>
-    <lastmod>2023-06-20T06:26:41.137Z</lastmod>
+    <lastmod>2023-06-20T07:33:02.445Z</lastmod>
   </url>
 </urlset>
