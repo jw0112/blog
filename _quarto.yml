@@ -24,7 +24,7 @@ format:
     self-contained: true
     smooth-scroll: true
     code-fold: true
-    code-tools: true
+    # code-tools: true
     # toc-depth : 5
     # number-sections: true
     css: styles.css
